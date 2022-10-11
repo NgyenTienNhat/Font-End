@@ -1,0 +1,623 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header .img-header {
+    height: 800px;
+    width: 100%;
+    position: relative;
+}
+
+header .header-box {
+    background-color: rgb(86, 85, 85);
+    width: 30%;
+    border-radius: 5px;
+    position: absolute;
+    top: 300px;
+    left: 10px;
+    opacity: 0.8;
+}
+
+header .content-header {
+    color: white;
+    text-align: center;
+}
+
+header .content-header .top {
+    border-bottom: 1px solid white;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+    font-size: 16px;
+
+}
+
+header .content-header .content {
+    padding-top: 15px;
+    text-align: center;
+    font-size: 12px;
+}
+
+header .content-header .btn {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+
+header .btn a {
+    border-radius: 3px;
+    background-color: rgb(8, 183, 81);
+    font-size: 14px;
+    padding-left: 35%;
+    padding-right: 35%;
+    text-decoration: none;
+    color: white;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+header .btn a i img {
+    width: 12px;
+    height: 12px;
+}
+
+
+
+.app-father {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.app {
+    width: 100%;
+    padding-left: 15px;
+
+}
+
+.app .app-name {
+    margin-top: 30px;
+    font-size: 40px;
+}
+
+.app .app-question {
+    font-size: 30px;
+    color: rgb(7, 177, 7);
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.app .app-content {
+    width: 70%;
+    letter-spacing: 1px;
+    line-height: 1.6;
+}
+
+.app .app-content span {
+    font-size: 18px;
+}
+
+.app .app-content p {
+    font-size: 12px;
+}
+
+.app .btn-download-app {
+    margin-top: 15px;
+    margin-bottom: 13px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+    background-color: rgb(212, 208, 208);
+}
+
+.app .app-version {
+    position: relative;
+}
+
+.app .app-version .vers {
+    position: absolute;
+    top: 3px;
+    left: 70px;
+}
+
+.app .app-version p {
+    font-size: 12px;
+    padding-top: 15px;
+    display: inline;
+}
+
+.app .app-version i img {
+    width: 14px;
+    height: 14px;
+}
+
+.app-img img {
+    width: 200px;
+    height: 260px;
+    position: absolute;
+    top: 0px;
+    right: 30px;
+}
+
+.clarity {
+    width: 70%;
+}
+
+.clarity-father {
+    background-color: rgb(244, 240, 240);
+    width: 100%;
+    display: flex;
+}
+
+.clarity-name {
+    margin-top: 50px;
+    font-size: 40px;
+}
+
+.clarity-question {
+    font-size: 30px;
+    color: red;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.clarity-content {
+    width: 100%;
+    letter-spacing: 1px;
+    line-height: 1.6;
+}
+
+.clarity-content p {
+    font-size: 12px;
+}
+
+.clarity-content span {
+    font-size: 18px;
+}
+
+.clarity-img {
+    width: 25%;
+}
+
+.clarity-img img {
+    width: 200px;
+    height: 250px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 25px;
+    border-radius: 5px;
+    margin-right: 40px;
+}
+
+.feature {
+    background-color: rgb(91, 90, 90);
+    padding-bottom: 40px;
+}
+
+.feature .feature-title {
+    text-align: center;
+    padding-top: 45px;
+    font-size: 40px;
+    color: white;
+    padding-bottom: 15px;
+}
+
+.feature .f-app {
+    text-align: center;
+    color: white;
+    font-size: 12px;
+}
+
+.grid-feature {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    column-gap: 20px;
+}
+
+.grid-feature .item {
+    text-align: center;
+    margin-top: 50px;
+    color: white;
+}
+
+.grid-feature .item img {
+    width: 42px;
+    height: 42px;
+}
+
+.grid-feature p {
+    font-size: 12px;
+}
+
+.pricing {
+    margin-bottom: 30px;
+}
+
+.pricing .pricing-title {
+    text-align: center;
+    padding-top: 45px;
+    font-size: 40px;
+    color: black;
+    padding-bottom: 15px;
+}
+
+.pricing p {
+    text-align: center;
+    color: black;
+    font-size: 12px;
+    margin-bottom: 40px;
+}
+
+.pricing .pricing-col {
+    width: 100%;
+    display: flex;
+}
+
+.pricing .pricing-col .basic {
+    width: 50%;
+    text-align: center;
+    border: 1px solid gray;
+    margin-left: 25px;
+    margin-right: 5px;
+    border-radius: 5px;
+    margin-bottom: 40px;
+    box-shadow: 0 0 2px 2px #e3e0e0;
+}
+
+.pricing .pricing-col .premium {
+    width: 50%;
+    text-align: center;
+    border: 1px solid gray;
+    margin-left: 5px;
+    margin-right: 25px;
+    border-radius: 5px;
+    margin-bottom: 40px;
+    box-shadow: 0 0 2px 2px #e3e0e0;
+}
+
+
+.pricing .pricing-col .basic ul li {
+    list-style-type: none;
+    border-bottom: 1px solid grey;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    font-weight: normal;
+}
+
+.pricing .pricing-col .basic ul li span {
+    font-weight: bold;
+}
+
+.pricing .pricing-col .premium ul li span {
+    font-weight: bold;
+}
+
+.pricing .pricing-col .premium ul li {
+    list-style-type: none;
+    border-bottom: 1px solid grey;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    font-weight: normal;
+}
+
+
+
+#title-basic {
+    font-size: 24px;
+    background-color: rgb(91, 90, 90);
+    color: white;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+#title-pre {
+    font-size: 24px;
+    background-color: red;
+    color: white;
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+}
+
+#price-basic {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 30px;
+    color: gray;
+}
+
+#price-pre {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 30px;
+    color: gray;
+}
+
+.pricing .pricing-col .btn-pricing-down {
+    background-color: black;
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+#btn-basic,
+#btn-pre {
+    background-color: #e3e0e0;
+}
+
+footer {
+    background-color: #e3e0e0;
+    text-align: center;
+    padding-top: 40px;
+}
+
+footer i img {
+    width: 24px;
+    height: 24px;
+}
+
+footer .social {
+    padding-bottom: 15px;
+}
+
+footer .author {
+    padding-bottom: 30px;
+}
+
+/* Samsung Galaxy S20 Ultra */
+@media only screen and (max-width: 412px ){
+    header .content-header .top,
+    .content {
+        display: none;
+    }
+    header .header-box {
+        background-color: initial;
+    }
+
+    header .img-header {
+        width: 100%;
+        height: auto;
+        position: relative;
+        margin-top: 2.188rem;
+    }
+
+    header .content-header .btn {
+        position: absolute;
+        top: -19.75rem;
+        left: -0.625rem;
+        width: 25.75rem;
+        display: flex;
+        background-color: rgb(8, 183, 81);
+        justify-content: center;
+    }
+
+    header .btn a {
+        font-size: 14px;
+        text-decoration: none;
+        color: white;
+        padding-top: 0.625rem;
+        padding-bottom: 0.375rem;
+    }
+
+    .app-father {
+        position: relative;
+        margin-bottom: 40px;
+    }
+
+    .app-img img {
+        width: 300px;
+        height: 360px;
+        position: absolute;
+        top: 28rem;
+        right: 3.5rem;
+    }
+
+    .app {
+        width: 89%;
+        padding-left: 20px;
+
+    }
+
+    .app .app-name {
+        margin-top: 30px;
+        font-size: 40px;
+    }
+
+    .app .app-question {
+        font-size: 30px;
+        color: rgb(7, 177, 7);
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    .app .app-content {
+        width: 90%;
+        letter-spacing: 1px;
+        line-height: 1.6;
+    }
+
+    .app .app-content span {
+        font-size: 24px;
+    }
+
+    .app .app-content p {
+        font-size: 16px;
+    }
+
+    .app .btn-download-app {
+        margin-top: 26.875rem;
+        margin-bottom: 13px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 25px;
+        padding-right: 25px;
+        background-color: rgb(212, 208, 208);
+    }
+
+    .app .app-version {
+        position: relative;
+    }
+
+    .app .app-version .vers {
+        position: absolute;
+        top: 3px;
+        left: 70px;
+    }
+
+    .app .app-version p {
+        font-size: 12px;
+        padding-top: 15px;
+        display: inline;
+    }
+
+    .app .app-version i img {
+        width: 14px;
+        height: 14px;
+    }
+
+    .clarity-father {
+        display: none;
+    }
+
+    .pricing .pricing-col {
+        width: 100%;
+        display: block;
+    }
+
+    .pricing .pricing-col .basic {
+        width: 90%;
+        text-align: center;
+        border: 1px solid gray;
+        border-radius: 5px;
+        box-shadow: 0 0 2px 2px #e3e0e0;
+        margin-left: 15px;
+        margin-right: 25px;
+
+
+    }
+
+    .pricing .pricing-col .premium {
+        width: 90%;
+        text-align: center;
+        border: 1px solid gray;
+        border-radius: 5px;
+        box-shadow: 0 0 2px 2px #e3e0e0;
+        margin-left: 15px;
+        margin-right: 25px;
+    }
+}
+
+/* Ipad mini */
+@media only screen and (max-width: 769px) and (min-width:767px){
+    header .content-header .btn {
+        margin-top: 10px;
+        margin-bottom: 20px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    
+    
+    header .btn a {
+        border-radius: 3px;
+        background-color: rgb(8, 183, 81);
+        font-size: 14px;
+        padding-left: 24%;
+        padding-right: 20%;
+        text-decoration: none;
+        color: white;
+    }
+    
+    .clarity {
+        width: 70%;
+        padding-left: 20px;
+        padding-right: 10px;
+
+    }
+    
+    .clarity-father {
+        background-color: rgb(244, 240, 240);
+        width: 100%;
+        display: flex;
+    }
+    
+    .clarity-name {
+        margin-top: 50px;
+        font-size: 40px;
+    }
+    
+    .clarity-question {
+        font-size: 30px;
+        color: red;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+    
+    .clarity-content {
+        width: 100%;
+        letter-spacing: 1px;
+        line-height: 1.6;
+    }
+    
+    .clarity-content p {
+        font-size: 12px;
+    }
+    
+    .clarity-content span {
+        font-size: 18px;
+    }
+    .clarity-img {
+        width: 30%;
+    }
+}
+
+/* Iphone 12 Pro */
+@media only screen and (max-width: 390px) {
+    header .content-header .btn {
+        position: absolute;
+        top: -19.75rem;
+        left: -0.625rem;
+        width: 24.5rem;
+        display: flex;
+        background-color: rgb(8, 183, 81);
+        justify-content: center;
+    
+    }
+}
+
+/* SS S8+ */
+@media only screen and (max-width: 360px) {
+
+    header .content-header .btn {
+        position: absolute;
+        top: -19.75rem;
+        left: -0.625rem;
+        width: 22.9rem;
+        display: flex;
+        background-color: rgb(8, 183, 81);
+        justify-content: center;
+    }
+    header .img-header{
+        width: 22.9rem;
+    }
+    .app-img img {
+        width: 300px;
+        height: 360px;
+        position: absolute;
+        top: 31rem;
+        right: 2rem;
+    }
+}
+

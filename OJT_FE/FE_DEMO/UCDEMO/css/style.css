@@ -1,0 +1,11 @@
+.container{
+    display: flex;
+}
+
+.logo{
+    width:25%;
+}
+
+.nav{
+    width:75%;
+}

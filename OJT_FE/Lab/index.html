@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<body>
+    <input type="number" id="input1" />
+    <input type="text" id="input2" style="width: 25px;" />
+    <input type="number" id="input3" />
+    <button id="btn"> = </button>
+    <input id="output"/>
+    <script>
+        var btn = document.querySelector('#btn');
+        var input3 = document.querySelector('#input3');
+        var input1 = document.querySelector('#input1');
+        var input2 = document.querySelector('#input2');
+        var output = document.querySelector('#output');
+        btn.addEventListener('click', function () {
+            if (input2.value == '+') {
+                output = Number(input1.value) + Number(input3.value);
+                document.querySelector('#output').value = Number(output);
+                console.log(output);
+            }
+
+            if (input2.value == '-') {
+                output = Number(input1.value) - Number(input3.value);
+                document.querySelector('#output').value = Number(output);
+                console.log(output);
+            }
+            if (input2.value == '*') {
+                output = Number(input1.value) * Number(input3.value);
+                document.querySelector('#output').value = Number(output);
+                console.log(output);
+            }
+            if (input2.value == '/') {
+                output = Number(input1.value) / Number(input3.value);
+                document.querySelector('#output').value = Number(output);
+                console.log(output);
+            }
+        });
+
+    </script>
+
+
+
+    <!-- <script>
+        var arr = [2, 6, 1, 8, 10, 7];
+        function findSecondLagest() {
+            let first = -Infinity, second = -Infinity;
+
+            for (let i = 0; i <= arr.length - 1; i++) {
+                if (arr[i] > first) {
+                    second = first;
+                    first = arr[i];
+                }
+                else if (arr[i] > second && arr[i] != first) {
+                    second = arr[i];
+                }
+            }
+            console.log(second);
+        }
+        findSecondLagest();
+
+
+
+        // bb sort start
+
+        //     for (let i = 0; i < arr.length; i++) {
+        //         for (let x = 0; x < arr.length - 1 - i; x++) {
+        //             if (arr[x] > arr[x + 1]) {
+        //                 [arr[x], arr[x + 1]] = [arr[x + 1], arr[x]];
+        //             }
+        //         }
+        //     }
+        // }
+        // findSecondLagest()
+        // console.log(arr[arr.length-2]);
+
+        // bb sort end
+
+        // var second = arr.sort(function (a, b) { return b - a })[1];
+        // console.log(second);
+    </script> -->
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    z-index: -2;
+}
+
+.navbar {
+    background-color: #000 !important;
+    opacity: 0.8;
+    position: fixed;
+    width: 100%;
+}
+
+.navbar-toggler{
+    background-color: gray;
+    margin-right: 2%;
+    
+}
+
+
+.nav-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.nav-btn a{
+    text-decoration: none;
+}
+ 
+header{
+    position: relative;
+}
+
+header .jumbotron{
+    background-image: url(./resources/images/bg.PNG);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+}
+
+header .text .btn{
+    margin-top: 2%;
+    background-color: #e20d51;
+    border: none;
+}
+
+header .text .btn:hover{
+    background-color: #b20b40;
+
+}
+
+.img-fluid{
+    border-radius: 50%;
+    width: 21.875rem ;
+    height: 21.875rem;
+}
+
+footer{
+    background-color: #000;
+    color: #fff;
+    width: 100%;
+    height: 4.25rem;
+}
+
+

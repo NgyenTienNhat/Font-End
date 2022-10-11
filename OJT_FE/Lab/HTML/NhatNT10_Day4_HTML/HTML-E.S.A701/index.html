@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>Your first HTML form, styled</title>
+  <link rel="stylesheet" href="./main.css" />
+</head>
+
+<body>
+  <div class="container">
+    <form>
+      <header class="header">
+        <h1 class="text-center">FA Survey Form</h1>
+        <p class="description text-center">
+          Thank you for taking the time to help us improve the platform
+        </p>
+      </header>
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" class="form-control" placeholder="Enter your name" required />
+      </div>
+      <!-- Email  -->
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="text" name="email" id="email" class="form-control" placeholder="Enter your email" required />
+      </div>
+      <!-- Age -->
+      <div class="form-group">
+        <label for="age">Age</label>
+        <input type="text" name="age" id="age" class="form-control" placeholder="Age" required />
+      </div>
+      <!-- Current role -->
+      <div class="form-group">
+        <label for="role">Which option best describes your current role?</label>
+        <select name="role" id="role" class="form-control">
+          <option value="">Select current role</option>
+          <option value="">Role2</option>
+          <option value="">Role3</option>
+          <option value="">Role4</option>
+        </select>
+      </div>
+      <!-- Recommend to friend -->
+      <div class="form-group">
+        <label for="friend">Would you recommend FA to a friend?</label>
+        <input class="input-radio" type="radio" id="friend" name="#" value="#"> Definitely <br>
+        <input class="input-radio" type="radio" id="friend" name="#" value="#"> Maybe <br>
+        <input class="input-radio" type="radio" id="friend" name="#" value="#"> Not Sure <br>
+      </div>
+      <!-- What would you like to see improved -->
+      <div class="form-group">
+        <label for="improved"> What would you like to see improved</label>
+        <input class="input-checkbox" type="checkbox" id="improved" name="#" value="#">Front-end Project <br>
+        <input class="input-checkbox" type="checkbox" id="improved" name="#" value="#">Back-end Project <br>
+        <input class="input-checkbox" type="checkbox" id="improved" name="#" value="#">AI <br>
+        <input class="input-checkbox" type="checkbox" id="improved" name="#" value="#">Machine Learning <br>
+        <input class="input-checkbox" type="checkbox" id="improved" name="#" value="#">Soft Skills <br>
+        <input class="input-checkbox" type="checkbox" id="improved" name="#" value="#">Presentations Skills <br>
+      </div>
+      <!-- Suggestions -->
+      <div class="form-group">
+        <label for="suggestions">Any comments or suggestions?</label>
+        <textarea name="#" id="suggestions" class="input-textarea"></textarea>
+      </div>
+      <!-- Submit-button -->
+      <div class="form-group">
+        <button type="submit" class="submit-button">Submit</button>
+      </div>
+    </form>
+  </div>
+</body>
+
+</html>

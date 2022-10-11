@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Object basics: Task 2</title>
+  <style>
+    p {
+      color: purple;
+      margin: 0.5em 0;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+  </style>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <section class="preview">
+
+
+
+  </section>
+
+</body>
+<script>
+  let info;
+
+  // Add your code here
+  var information = {
+    name :'Vu',
+    nationality: 'Viet Nam',
+    genre : 'Chill',
+    debut : 2016,
+    songs : {
+      nameSong: ['La Lung', 'Doi', 'Do ai?', 'Buoc qua nhau'],
+      released: ['2016', '2017', '2019', '2021']
+    }
+  }
+
+  info = `The ${information.nationality} ${information.genre} star ${information.name} were active since ${information.debut}.\n
+         His/her first song, ${information.songs.nameSong[0]}, was released in ${information.songs.released[0]}.\n
+         His/her last song, ${information.songs.nameSong[information.songs.nameSong.length-1]}, was released in ${information.songs.released[information.songs.released.length-1]}.`
+
+  // Don't edit the code below here!
+
+  const section = document.querySelector('section');
+  let para1 = document.createElement('p');
+  para1.textContent = info;
+  section.appendChild(para1);
+</script>
+
+</html>

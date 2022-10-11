@@ -1,0 +1,3 @@
+background-repeat : lặp ảnh (repeat-x, repeat-y, no-repeat)
+background-attachment: cuộn (fixed: fix cứng, scroll: di chuyển theo chiều cuộn)
+backgroup-position: ghim anh ( top bottom right left)

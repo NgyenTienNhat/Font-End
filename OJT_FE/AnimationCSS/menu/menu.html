@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Animations</title>
+    <link rel="stylesheet" href="./menu.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+    <script defer src="./main.js"></script>
+
+</head>
+
+<body>
+    <div class="menu">
+        <ul>
+            <li class="active"><i class="fa-regular fa-user"></i></li>
+            <li><i class="fa-regular fa-address-book"></i></li>
+            <li><i class="fa-regular fa-envelope"></i></li>
+            <li><i class="fa-solid fa-arrow-right-from-bracket"></i></li>
+            <div id="action"></div>
+        </ul>
+    </div>
+</body>
+
+<!-- <script>
+    let items = document.querySelectorAll('li');
+    items.forEach(li => {
+        li.addEventListener('click', function (e) {
+            console.log(e.target)
+            document.getElementById('action').style.left = e.target.offsetLeft + 'px';
+            items.forEach(li_hide => {
+                li_hide.classList.remove('active');
+            })
+            this.classList.add('active');
+        })
+    })
+
+</script> -->
+
+</html>

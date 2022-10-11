@@ -1,0 +1,118 @@
+.navbar{
+    background-color: #e9ecef !important;
+}
+
+header .jumbotron{
+    background-image: url(./resources/images/bg-masthead.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+header .container input{
+    width: 30%;
+    height: 2.375rem;
+    border-radius: 3px;
+    border: none;
+}
+
+header button{
+    border: none;
+    margin-bottom: 5px;
+}
+
+.container img{
+    width: 100px;
+    height: 100px;
+}
+
+.container{
+    margin-bottom: 60px;
+}
+
+.img-content{
+    max-width: 100%;
+}
+
+.col-sm-6{
+    padding: 0 !important;
+}
+
+.team img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.bot .jumbotron{
+    background-image: url(./resources/images/bg-masthead.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.bot .container input{
+    width: 30%;
+    height: 2.375rem;
+    border-radius: 3px;
+    border: none;
+}
+
+.bot button{
+    border: none;
+    margin-bottom: 5px;
+}
+
+footer a{
+    text-decoration: none;
+    vertical-align: middle;
+}
+
+label:not(:last-child):after{
+    content: " . ";
+}
+
+.col-sm-7, .col-sm{
+    padding: 0 !important;
+}
+
+footer .row {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media screen and (min-width: 412px) and (max-width: 759px){
+    .signup{
+        display: block;
+    }
+
+    header .container input{
+        width: 100%;
+        margin-bottom: 1rem;
+        border-radius: 5px;
+    }
+    
+    header button{
+      width: 100%;
+      border-radius: 5px;
+    }
+
+    .bot .container input{
+        width: 100%;
+        margin-bottom: 1rem;
+        border-radius: 5px;
+    }
+    
+    .bot button{
+        width: 100%;
+        border-radius: 5px;
+    }
+
+    
+}
+
+
+
+
