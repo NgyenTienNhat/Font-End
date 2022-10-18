@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validator Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="main">
+
+        <form action="" method="POST" class="form" id="form-1">
+            <h3 class="heading">Thành viên đăng ký</h3>
+
+            <div class="spacer"></div>
+
+            <div class="form-group">
+                <label for="fullname" class="form-label">Tên đầy đủ</label>
+                <input id="fullname" name="fullname" type="text" placeholder="VD: Nhat Nhat" class="form-control">
+                <span class="form-message"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="email" class="form-label">Email</label>
+                <input id="email" name="email" type="text" placeholder="VD: email@domain.com" class="form-control">
+                <span class="form-message"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="password" class="form-label">Mật khẩu</label>
+                <input id="password" name="password" type="password" placeholder="Nhập mật khẩu" class="form-control">
+                <span class="form-message"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="password_confirmation" class="form-label">Nhập lại mật khẩu</label>
+                <input id="password_confirmation" name="password_confirmation" placeholder="Nhập lại mật khẩu"
+                    type="password" class="form-control">
+                <span class="form-message"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="gender" class="form-label">Gender</label>
+                <div class="radio">
+                    <input class="input-radio" type="radio" id="gender" name="gender" value="male"> Male
+                    <input class="input-radio" type="radio" id="gender" name="gender" value="female"> Female
+                    <input class="input-radio" type="radio" id="gender" name="gender" value="other"> Other
+                </div>
+                <span class="form-message"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="province" class="form-label">Nhập lại mật khẩu</label>
+                <select id="province" name="province" class="form-control">
+                    <option value="">--Chọn tỉnh thành--</option>
+                    <option value="hanoi">Hà Nội</option>
+                    <option value="hcm">TP.HCM</option>
+                </select>
+                <span class="form-message"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="checkbox" class="form-label">Checkbox</label>
+                <div class="radio">
+                    <input class="input-radio" type="checkbox" id="checkbox" name="checkbox" value="checkbox1"> Checkbox1
+                    <input class="input-radio" type="checkbox" id="checkbox" name="checkbox" value="checkbox2"> Checkbox2
+                    <input class="input-radio" type="checkbox" id="checkbox" name="checkbox" value="other"> Other
+                </div>
+                <span class="form-message"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="avatar" class="form-label">Ảnh đại diện</label>
+                <input id="avatar" name="avatar" type="file"
+                    class="form-control">
+                <span class="form-message"></span>
+            </div>
+
+            <button class="form-submit">Đăng ký</button>
+        </form>
+
+    </div>
+    <script src="./validator.js"></script>
+
+    <script>
+        // Mong muon khi su dung thu vien
+        Validator({
+            form: '#form-1',
+            errorSelector: '.form-message',
+            formGroupSelector: '.form-group',
+            rules: [
+                // Validator.isRequired('#fullname', 'Vui lòng nhập tên đầy đủ của bạn'),
+                // Validator.isRequired('#email'),
+                // Validator.isEmail('#email', 'Vui lòng nhập Email của bạn'),
+                // Validator.minLength('#password', 8),
+                // Validator.isRequired('#password_confirmation'),
+                // Validator.isConfirmed('#password_confirmation', function () {
+                //     return document.querySelector('#form-1 #password').value;
+                // }, 'Mật khẩu nhập lại không chính xác'),
+                Validator.isRequired('input[name="gender"]', 'Vui lòng chọn trường này'),
+                // Validator.isRequired('#province','Vui lòng chọn trường này'),
+                // Validator.isRequired('input[name="checkbox"]','Vui lòng chọn trường này'),
+                Validator.isRequired('#avatar')
+            ],
+            onsubmit: function (data) {
+                console.log(data);
+            }
+
+        })
+    </script>
+</body>
+
+</html>

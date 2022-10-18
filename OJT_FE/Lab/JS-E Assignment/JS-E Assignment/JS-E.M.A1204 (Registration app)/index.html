@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./main.js" defer></script>
+</head>
+
+<body>
+    <style>
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .main {
+            width: 300px;
+            height: 400px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+        h2{
+            padding-bottom: 20px;
+            border-bottom: 1px solid #000;
+            text-align: center;
+        }
+        .form{
+            padding-left: 30px;
+        }
+
+        input{
+            width: 235px;
+        }
+
+        button{
+            background-color: rgb(55, 8, 116);
+            color: white;
+            border-radius: 5px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+    </style>
+    <div class="main">
+        <h2>Registration Form</h2>
+        <p id="registerSucess"></p>
+        <div class="form" name="myForm" action="#" method="#">
+            <label for="">Username</label><br>
+            <input type="text" name="fname"><br>
+            <label for="" id="validateUsername"></label><br>
+            <label for="">Password</label><br>
+            <input type="text" name="fpass"><br>
+            <label for="" id="validatePassword"></label><br>
+            <label for="">Confirm Your Password</label><br>
+            <input type="text" name="fpasscf"><br>
+            <label for="" id="validateConfPass"></label><br>
+            <button type="submit" value="Register" onclick="register()">Register</button>
+        </div>
+    </div>
+</body>
+
+<script>
+    function register() {
+        username = (document.querySelector('input[name="fname"]')).value;
+        password = (document.querySelector('input[name="fpass"]')).value;
+        passwordConfirm = (document.querySelector('input[name="fpasscf"]')).value;
+        alertUser = document.querySelector('#validateUsername');
+        alertPassword = document.querySelector('#validatePassword');
+        alertConfirmpass = document.querySelector('#validateConfPass');
+        alertSuccess = document.querySelector('#registerSucess');
+
+
+        if (username == "" && password == "" && passwordConfirm == "") {
+            alertUser.innerHTML = 'Username is required';
+            alertUser.style.color = 'red';
+            alertPassword.innerHTML = 'Password is required';
+            alertPassword.style.color = 'red';
+            alertConfirmpass.innerHTML = 'Confirm password is required';
+            alertConfirmpass.style.color = 'red';
+        }
+        if(username != "" && password == "" && passwordConfirm == "" ){
+            alertUser.style.display = 'none'
+            alertPassword.innerHTML = 'Password is required';
+            alertPassword.style.color = 'red';
+            alertConfirmpass.innerHTML = 'Confirm password is required';
+            alertConfirmpass.style.color = 'red';
+        }
+        if(username != "" && password != "" && passwordConfirm == "" ){
+            alertUser.style.display = 'none'
+            alertPassword.style.display = 'none';
+            alertConfirmpass.innerHTML = 'Confirm password is required';
+            alertConfirmpass.style.color = 'red';
+        }
+        if(username != "" && password == "" && passwordConfirm != "" ){
+            alertUser.style.display = 'none'
+            alertPassword.innerHTML = 'Password is required';
+            alertPassword.style.color = 'red';
+        }
+        if(username == "" && password != passwordConfirm ){
+            alertUser.innerHTML = 'Username is required';
+            alertUser.style.color = 'red';
+            alertConfirmpass.innerHTML = 'Password and confirm password not match';
+            alertConfirmpass.style.color = 'red';
+        }
+        if(username == "" && password == passwordConfirm ){
+            alertUser.innerHTML = 'Username is required';
+            alertUser.style.color = 'red';
+        }
+
+        if(username != "" && password != passwordConfirm ){
+            alertConfirmpass.innerHTML = 'Password and confirm password not match';
+            alertConfirmpass.style.color = 'red';
+        }
+        if(username != "" && password!="" && passwordConfirm!= "" && password == passwordConfirm ){
+            registerSucess.innerHTML = 'You have register successfully';
+            registerSucess.style.color = 'green';
+            alertUser.style.display = 'none';
+            alertPassword.style.display = 'none';
+            alertConfirmpass.style.display = 'none';
+        }
+        
+
+    }
+</script>
+
+</html>

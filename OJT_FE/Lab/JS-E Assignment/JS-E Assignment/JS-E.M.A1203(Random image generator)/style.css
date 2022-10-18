@@ -1,0 +1,39 @@
+img {
+    margin: 20px;
+    border: 1px solid #000;
+}
+.item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+div, h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    width: 300px;
+    height: 300px;
+    border: 1px solid#000;
+    margin: 20px;
+}
+
+button{
+    background-color: rgb(227, 26, 26);
+    padding-left:  30px;
+    padding-right:  30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.main{
+    border: 1px solid#000;
+    display: block;
+}

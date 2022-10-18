@@ -1,17 +1,60 @@
+const myQuestions = [
+  {
+    question: "Javascript is _________ language.",
+    answers: {
+      a: "Programming",
+      b: "Application",
+      c: "None of These",
+      d: "Scripting",
+    },
+    multi: false,
+    correctAnswer: "d",
+  },
+  {
+    question:
+      "Which of the following is a valid type of function javascript supports?",
+    answers: {
+      a: "named function",
+      b: "anonymous function",
+      c: "both of the above",
+      d: "none of the above",
+    },
+    multi: false,
+    correctAnswer: "c",
+  },
+  {
+    question:
+      "Which built-in method returns the index within the calling String object of the first occurrence of the specified value?",
+    answers: {
+      a: "getIndex()",
+      b: "location()",
+      c: "indexOf()",
+      d: "getLocation()",
+    },
+    multi: false,
+    correctAnswer: "c",
+  },
+  {
+    question: "Which one of the following is valid data type of JavaScript",
+    answers: {
+      a: "number",
+      b: "void",
+      c: "boolean",
+      d: "nothing",
+    },
+    multi: false,
+    correctAnswer: "c",
+  },
+];
+
 (function () {
-  // Functions
   function buildQuiz() {
-    // variable to store the HTML output
     const output = [];
 
-    // for each question...
     myQuestions.forEach((currentQuestion, questionNumber) => {
-      // variable to store the list of possible answers
       const answers = [];
 
-      // and for each available answer...
       for (letter in currentQuestion.answers) {
-        // add checkbox answer 
         answers.push(
           `<label>
                 <input type="checkbox" name="question${questionNumber}" value="${letter}">
@@ -30,17 +73,12 @@
       );
     });
 
-    // finally combine our output list into one string of HTML and put it on the page
     quizContainer.innerHTML = output.join("");
   }
 
   function showResults() {
-    // gather answer containers from our quiz
     const answerContainers = quizContainer.querySelectorAll(".answers");
-
-    // keep track of user's answers
     let numCorrect = 0;
-
     // for each question...
     myQuestions.forEach((currentQuestion, questionNumber) => {
       // find selected answer
@@ -97,54 +135,6 @@
   const quizContainer = document.getElementById("quiz");
   const resultsContainer = document.getElementById("results");
   const submitBtn = document.getElementById("submit");
-  const myQuestions = [
-    {
-      question: "Javascript is _________ language.",
-      answers: {
-        a: "Programming",
-        b: "Application",
-        c: "None of These",
-        d: "Scripting",
-      },
-      multi: false,
-      correctAnswer: "d",
-    },
-    {
-      question:
-        "Which of the following is a valid type of function javascript supports?",
-      answers: {
-        a: "named function",
-        b: "anonymous function",
-        c: "both of the above",
-        d: "none of the above",
-      },
-      multi: false,
-      correctAnswer: "c",
-    },
-    {
-      question:
-        "Which built-in method returns the index within the calling String object of the first occurrence of the specified value?",
-      answers: {
-        a: "getIndex()",
-        b: "location()",
-        c: "indexOf()",
-        d: "getLocation()",
-      },
-      multi: false,
-      correctAnswer: "c",
-    },
-    {
-      question: "Which one of the following is valid data type of JavaScript",
-      answers: {
-        a: "number",
-        b: "void",
-        c: "boolean",
-        d: "nothing",
-      },
-      multi: false,
-      correctAnswer: "c",
-    },
-  ];
 
   // Kick things off
   buildQuiz();

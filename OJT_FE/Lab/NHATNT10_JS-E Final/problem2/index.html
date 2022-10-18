@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" name="" id="number" placeholder="Input value">
+    <button onclick="getData()">Input</button>
+    <pre id="out"></pre>
+
+    <script>
+        function spiral(length) {
+            var upper = 0,
+                lower = length - 1,
+                left = 0,
+                right = length - 1,
+                i = 0,
+                j = 0,
+                result = Array.from({ length }, _ => []),
+                value = 1;
+
+            while (true) {
+                if (upper++ > lower) break;
+
+                for (; j < right; j++) result[i][j] = value++;
+                if (right-- < left) break;
+
+                for (; i < lower; i++) result[i][j] = value++;
+
+                if (lower-- < upper) break;
+
+                for (; j > left; j--) result[i][j] = value++;
+                if (left++ > right) break;
+
+                for (; i > upper; i--) result[i][j] = value++;
+            }
+
+            result[i][j] = value++;
+            return result;
+        }
+
+        var target = document.getElementById('out')
+
+        function getData() {
+            let i = document.getElementById("number").value
+            target.innerHTML += '[\n' + spiral(i).map(a => ' [' + a.map(v => v.toString().padStart(2)).join(',')).join(']\n') + ']\n' + ']\n\n';
+
+        }
+
+
+
+    </script>
+</body>
+
+</html>
